@@ -5,35 +5,79 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GabutXModApp</title>
-<meta name="description" content="Download aplikasi MOD gratis tanpa shortlink">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
 
 <link rel="stylesheet" href="css/style.css">
-
-<!-- Tailwind CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-
 </head>
+
 <body class="bg-slate-950 text-slate-200">
 
-<header class="navbar">
+<nav class="nav">
 <div class="container flex justify-between items-center">
 
-<h1 class="logo">GabutXModApp</h1>
+<a href="#/home" class="logo">GabutXModApp</a>
 
-<input id="search" placeholder="Cari aplikasi..." class="search">
+<input id="search-input" placeholder="Cari aplikasi..." class="search">
 
 </div>
-</header>
+</nav>
 
-<main class="container mt-6">
+<main class="container pt-24">
 
-<div id="apps-grid" class="grid"></div>
+<section id="view-home">
+<div id="genre-filters" class="mb-6 flex gap-2"></div>
+<div id="home-grid" class="grid"></div>
+</section>
+
+<section id="view-detail" class="hidden">
+
+<button onclick="app.goHome()" class="mb-4 text-blue-400">← Kembali</button>
+
+<div class="detail-card">
+
+<img id="detail-icon" class="detail-icon">
+
+<h1 id="detail-title"></h1>
+
+<p id="detail-dev"></p>
+
+<p id="detail-version"></p>
+
+<p id="detail-size"></p>
+
+<button onclick="app.showDownloadModal()" class="download-btn">
+Download APK
+</button>
+
+<div id="detail-mod"></div>
+
+<h3 class="mt-6">Screenshot</h3>
+
+<div id="detail-ss" class="ss"></div>
+
+<p id="detail-desc"></p>
+
+</div>
+
+</section>
 
 </main>
 
-<footer class="footer">
-GabutXModApp © 2026
-</footer>
+<div id="download-modal" class="modal hidden">
+
+<div class="modal-card">
+
+<h3>Server Download</h3>
+
+<div id="download-links"></div>
+
+<button onclick="app.closeModal()">Close</button>
+
+</div>
+
+</div>
 
 <script src="js/app.js"></script>
 

@@ -1,21 +1,44 @@
-
 [
-{
-"id":"melolo",
-"title":"Melolo",
-"developer":"POLIGON",
-"version":"5.2.0",
-"size":"80MB",
-"icon":"https://play-lh.googleusercontent.com/zLxJyyx3aGLSR63NvdVv6ERGaLwIujdCRwsEi_-G-6FhCzdrIGMKXUExLQWo29OcZ4A2=w480-h960-rw",
-"download":"https://example.com/melolo.apk"
-},
-{
-"id":"bittv",
-"title":"BitTV",
-"developer":"Duktek Digital",
-"version":"2.1.5",
-"size":"9MB",
-"icon":"https://gcdnb.pbrd.co/images/RF1pw1QjjoVk.png",
-"download":"https://example.com/bittv.apk"
-}
+  {
+    "id": "app-melolo",
+    "title": "Melolo",
+    "developer": "POLIGON",
+    "version": "5.2.0",
+    "size": "80MB",
+    "description": "Drama pendek gratis.",
+    "icon": "https://play-lh.googleusercontent.com/zLxJyyx3aGLSR63NvdVv6ERGaLwIujdCRwsEi_-G-6FhCzdrIGMKXUExLQWo29OcZ4A2=w480-h960-rw",
+    "modInfo": [
+      "VIP",
+      "No Ads"
+    ],
+    "screenshots": [
+      "https://gcdnb.pbrd.co/images/xGX5fpSIEOeJ.jpg",
+      "https://gcdnb.pbrd.co/images/7f7o8wDl2Kgr.jpg"
+    ],
+    "downloadLinks": [
+      {
+        "name": "Mediafire",
+        "url": "https://example.com"
+      }
+    ]
+  },
+  {
+    "id": "app-bittv",
+    "title": "BitTV",
+    "developer": "Duktek Digital",
+    "version": "2.1.5",
+    "size": "9MB",
+    "description": "Streaming TV gratis.",
+    "icon": "https://gcdnb.pbrd.co/images/RF1pw1QjjoVk.png",
+    "modInfo": [
+      "No Ads"
+    ],
+    "screenshots": [],
+    "downloadLinks": [
+      {
+        "name": "Mediafire",
+        "url": "https://example.com"
+      }
+    ]
+  }
 ]
