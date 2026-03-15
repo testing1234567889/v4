@@ -12,9 +12,20 @@ app.renderHome()
 
 const app={
 
+selected:null,
+
+toggleMenu(){
+
+document.getElementById("sidebar").classList.toggle("hidden")
+
+},
+
 goHome(){
 
 location.hash="#/home"
+
+document.getElementById("view-detail").classList.add("hidden")
+document.getElementById("view-home").classList.remove("hidden")
 
 },
 
@@ -27,7 +38,6 @@ grid.innerHTML=""
 apps.forEach(a=>{
 
 grid.innerHTML+=`
-
 <div class="card" onclick="app.openApp('${a.id}')">
 
 <img src="${a.icon}">
@@ -37,7 +47,6 @@ grid.innerHTML+=`
 <p>${a.developer}</p>
 
 </div>
-
 `
 
 })
@@ -48,15 +57,16 @@ openApp(id){
 
 const data=apps.find(x=>x.id==id)
 
+this.selected=data
+
 document.getElementById("view-home").classList.add("hidden")
 document.getElementById("view-detail").classList.remove("hidden")
 
 document.getElementById("detail-icon").src=data.icon
 document.getElementById("detail-title").textContent=data.title
 document.getElementById("detail-dev").textContent=data.developer
-document.getElementById("detail-version").textContent=data.version
-document.getElementById("detail-size").textContent=data.size
-
+document.getElementById("detail-version").textContent="Versi: "+data.version
+document.getElementById("detail-size").textContent="Size: "+data.size
 document.getElementById("detail-desc").textContent=data.description
 
 let mod=""
@@ -79,8 +89,6 @@ ss+=`<img src="${s}">`
 
 document.getElementById("detail-ss").innerHTML=ss
 
-this.selected=data
-
 },
 
 showDownloadModal(){
@@ -92,9 +100,7 @@ links.innerHTML=""
 this.selected.downloadLinks.forEach(l=>{
 
 links.innerHTML+=`
-
-<a href="${l.url}" target="_blank">${l.name}</a><br>
-
+<a href="${l.url}" target="_blank">${l.name}</a>
 `
 
 })
@@ -116,10 +122,8 @@ document.getElementById("search-input").addEventListener("input",e=>{
 const q=e.target.value.toLowerCase()
 
 const filtered=apps.filter(a=>
-
-a.title.toLowerCase().includes(q)||
+a.title.toLowerCase().includes(q) ||
 a.developer.toLowerCase().includes(q)
-
 )
 
 const grid=document.getElementById("home-grid")
@@ -129,7 +133,6 @@ grid.innerHTML=""
 filtered.forEach(a=>{
 
 grid.innerHTML+=`
-
 <div class="card" onclick="app.openApp('${a.id}')">
 
 <img src="${a.icon}">
@@ -139,7 +142,6 @@ grid.innerHTML+=`
 <p>${a.developer}</p>
 
 </div>
-
 `
 
 })

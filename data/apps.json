@@ -1,6 +1,6 @@
 [
   {
-    "id": "app-melolo",
+    "id": "melolo",
     "title": "Melolo",
     "developer": "POLIGON",
     "version": "5.2.0",
@@ -8,8 +8,8 @@
     "description": "Drama pendek gratis.",
     "icon": "https://play-lh.googleusercontent.com/zLxJyyx3aGLSR63NvdVv6ERGaLwIujdCRwsEi_-G-6FhCzdrIGMKXUExLQWo29OcZ4A2=w480-h960-rw",
     "modInfo": [
-      "VIP",
-      "No Ads"
+      "VIP Premium",
+      "Tanpa Iklan"
     ],
     "screenshots": [
       "https://gcdnb.pbrd.co/images/xGX5fpSIEOeJ.jpg",
@@ -17,26 +17,11 @@
     ],
     "downloadLinks": [
       {
-        "name": "Mediafire",
+        "name": "MediaFire",
         "url": "https://example.com"
-      }
-    ]
-  },
-  {
-    "id": "app-bittv",
-    "title": "BitTV",
-    "developer": "Duktek Digital",
-    "version": "2.1.5",
-    "size": "9MB",
-    "description": "Streaming TV gratis.",
-    "icon": "https://gcdnb.pbrd.co/images/RF1pw1QjjoVk.png",
-    "modInfo": [
-      "No Ads"
-    ],
-    "screenshots": [],
-    "downloadLinks": [
+      },
       {
-        "name": "Mediafire",
+        "name": "TeraBox",
         "url": "https://example.com"
       }
     ]

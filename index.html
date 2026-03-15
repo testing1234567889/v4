@@ -12,10 +12,15 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-slate-950 text-slate-200">
+<body class="bg-slate-950 text-white">
 
+<!-- NAVBAR -->
 <nav class="nav">
 <div class="container flex justify-between items-center">
+
+<button class="menu-btn" onclick="app.toggleMenu()">
+<i class="ph ph-list"></i>
+</button>
 
 <a href="#/home" class="logo">GabutXModApp</a>
 
@@ -24,16 +29,29 @@
 </div>
 </nav>
 
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar hidden">
+
+<a href="#/home" onclick="app.toggleMenu()">Beranda</a>
+<a href="#/genre/Streaming" onclick="app.toggleMenu()">Streaming</a>
+<a href="#/genre/Televisi" onclick="app.toggleMenu()">Televisi</a>
+
+</div>
+
+<!-- CONTENT -->
 <main class="container pt-24">
 
 <section id="view-home">
-<div id="genre-filters" class="mb-6 flex gap-2"></div>
+
 <div id="home-grid" class="grid"></div>
+
 </section>
 
 <section id="view-detail" class="hidden">
 
-<button onclick="app.goHome()" class="mb-4 text-blue-400">← Kembali</button>
+<button onclick="app.goHome()" class="back-btn">
+← Kembali
+</button>
 
 <div class="detail-card">
 
@@ -47,15 +65,15 @@
 
 <p id="detail-size"></p>
 
-<button onclick="app.showDownloadModal()" class="download-btn">
-Download APK
-</button>
-
 <div id="detail-mod"></div>
+
+<button class="download-btn" onclick="app.showDownloadModal()">
+<i class="ph ph-download"></i> Download APK
+</button>
 
 <h3 class="mt-6">Screenshot</h3>
 
-<div id="detail-ss" class="ss"></div>
+<div id="detail-ss" class="screenshots"></div>
 
 <p id="detail-desc"></p>
 
@@ -65,15 +83,19 @@ Download APK
 
 </main>
 
+<!-- DOWNLOAD MODAL -->
+
 <div id="download-modal" class="modal hidden">
 
 <div class="modal-card">
 
-<h3>Server Download</h3>
+<h3 class="modal-title">Server Download</h3>
 
 <div id="download-links"></div>
 
-<button onclick="app.closeModal()">Close</button>
+<button onclick="app.closeModal()" class="close-btn">
+Tutup
+</button>
 
 </div>
 

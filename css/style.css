@@ -3,11 +3,48 @@ body{font-family:system-ui;margin:0}
 
 .container{max-width:1300px;margin:auto;padding:20px}
 
-.nav{position:fixed;width:100%;background:#020617;border-bottom:1px solid #1e293b}
+.nav{
+position:fixed;
+top:0;
+width:100%;
+background:#020617;
+border-bottom:1px solid #1e293b;
+}
 
 .logo{font-weight:bold}
 
-.search{background:#0f172a;border:1px solid #334155;padding:8px;border-radius:8px}
+.menu-btn{
+background:none;
+border:none;
+color:white;
+font-size:22px;
+}
+
+.search{
+background:#0f172a;
+border:1px solid #334155;
+padding:6px 10px;
+border-radius:8px;
+}
+
+.sidebar{
+position:fixed;
+top:60px;
+left:0;
+width:220px;
+background:#020617;
+height:100%;
+padding:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+border-right:1px solid #1e293b;
+}
+
+.sidebar a{
+padding:8px;
+border-radius:6px;
+}
 
 .grid{
 display:grid;
@@ -23,9 +60,11 @@ padding:14px;
 cursor:pointer;
 }
 
-.card:hover{border-color:#3b82f6}
-
-.card img{width:60px;height:60px;border-radius:12px}
+.card img{
+width:60px;
+height:60px;
+border-radius:12px;
+}
 
 .detail-card{
 background:#020617;
@@ -34,23 +73,27 @@ padding:20px;
 border-radius:14px;
 }
 
-.detail-icon{width:120px;border-radius:16px}
+.detail-icon{
+width:120px;
+border-radius:14px;
+}
+
+.screenshots{
+display:flex;
+gap:10px;
+overflow:auto;
+margin-top:10px;
+}
+
+.screenshots img{
+height:240px;
+border-radius:10px;
+}
 
 .download-btn{
 margin-top:10px;
 background:#2563eb;
-padding:10px 18px;
-border-radius:10px;
-}
-
-.ss{
-display:flex;
-gap:10px;
-overflow:auto;
-}
-
-.ss img{
-height:240px;
+padding:10px 16px;
 border-radius:10px;
 }
 
@@ -59,15 +102,29 @@ position:fixed;
 inset:0;
 background:rgba(0,0,0,.8);
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 }
 
 .modal-card{
 background:#020617;
 padding:20px;
 border-radius:12px;
-width:300px;
+width:320px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.modal-title{
+font-size:18px;
+font-weight:bold;
+}
+
+.close-btn{
+background:#1e293b;
+padding:8px;
+border-radius:6px;
 }
 
 .hidden{display:none}
